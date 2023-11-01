@@ -1,0 +1,267 @@
+* {
+    margin: none;
+    padding: none;
+}
+
+body {
+    margin: 2%;
+    font-family: 'Lobster', sans-serif;
+}
+
+header {
+    display: flex;
+    border-bottom: solid black;
+}
+
+aside {
+    border-bottom: solid black;
+}
+
+.coordonnees {
+    width: 30%;
+    border-right: solid black;
+}
+
+.coordonnees p {
+    text-align: center;
+    margin: 0.3%;
+}
+
+.presentation {
+    display: flex;
+    width: 70%;
+}
+
+.titre {
+    width: 70%;
+    text-align: center;
+}
+
+h1 {
+    font-size: 3.5em;
+    margin: 10% 15%;
+    font-family: 'Agbalumo', sans-serif;
+    border-radius: 50px;
+    background: #ccf4e3;
+    box-shadow: 23px -23px 45px #a7c8ba,
+        -23px 23px 45px #f1ffff;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2em;
+    font-family: 'Agbalumo', sans-serif;
+    border-radius: 50px;
+    background: #ccf4e3;
+    box-shadow: 23px -23px 45px #a7c8ba,
+        -23px 23px 45px #f1ffff;
+}
+
+.avatar {
+    width: 30%;
+    border: solid #ccf4e3;
+    border-radius: 50%;
+}
+
+main {
+    font-size: 1.3em;
+    text-align: justify;
+}
+
+.experiences {
+    padding: 3%;
+    border-bottom: solid black;
+}
+
+.experiences h3 {
+    font-size: 1.5em;
+}
+
+li {
+    list-style-type: none;
+}
+
+nav {
+    display: flex;
+    border-bottom: solid black;
+}
+
+.boule {
+    border-radius: 50%;
+    background-color: #ccf4e3;
+    height: 80%;
+    width: 80%;
+    margin: 0.2%;
+    padding: 1%;
+}
+
+.cv {
+    display: flex;
+}
+
+aside {
+    border-right: solid black;
+    padding: 2%;
+}
+
+.competences {
+    width: 35%;
+}
+
+.competences li {
+    text-align: start;
+    line-height: 30px;
+}
+
+.progress {
+    width: 100%;
+    padding: 2%;
+    background-color: white;
+}
+
+
+.progress-bar {
+    height: 20px;
+    width: 0;
+    background-color: #ccf4e3;
+    transition: width 0.3s ease-in-out;
+}
+
+.quarante {
+    width: 40%;
+}
+
+.cinquante {
+    width: 50%;
+}
+
+.dix-huit {
+    width: 18%;
+}
+
+.vingt-cinq {
+    width: 25%;
+}
+
+.soixante {
+    width: 60%;
+}
+
+.quatre-vingt {
+    width: 80%;
+}
+
+.experiences {
+    width: 65%;
+}
+
+.contact {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: solid black;
+}
+
+footer {
+    position: relative;
+    padding: 1%;
+    margin: 1%;
+}
+
+footer .graphique {
+    border: solid #ccf4e3 10px;
+    border-radius: 50%;
+    width: 70%;
+    height: 150px;
+    position: absolute;
+    top: 110%;
+    left: 15%;
+}
+
+footer .horizon {
+    border: solid #ccf4e3 2px;
+    width: 70%;
+    position: absolute;
+    top: 48%;
+    left: 16%;
+}
+
+footer .vertical {
+    border: solid #ccf4e3 2px;
+    height: 67%;
+    position: absolute;
+    top: 15%;
+    left: 50%;
+}
+
+footer .leader {
+    text-align: center;
+    font-size: 1.3em;
+    border: 0%;
+    border-radius: 50%;
+    background-color: #ccf4e3;
+    width: 30%;
+    height: 50px;
+    position: absolute;
+    left: 35%;
+    line-height: 50px;
+    top: -32%;
+}
+
+footer .skills {
+    text-align: center;
+    font-size: 1.3em;
+    border: 0%;
+    border-radius: 50%;
+    background-color: #ccf4e3;
+    width: 30%;
+    height: 50px;
+    position: absolute;
+    top: 18%;
+    left: 35%;
+    line-height: 50px;
+}
+
+footer .prevenant {
+    text-align: center;
+    align-items: center;
+    font-size: 1.3em;
+    border: 0%;
+    border-radius: 50%;
+    background-color: #ccf4e3;
+    width: 30%;
+    height: 50px;
+    position: absolute;
+    top: 18%;
+    left: -13%;
+    line-height: 50px;
+}
+
+footer .react {
+    text-align: center;
+    align-items: center;
+    font-size: 1.3em;
+    border: 0%;
+    border-radius: 50%;
+    background-color: #ccf4e3;
+    width: 30%;
+    height: 50px;
+    position: absolute;
+    top: 18%;
+    left: 83%;
+    line-height: 50px;
+}
+
+footer .spirit {
+    text-align: center;
+    align-items: center;
+    font-size: 1.3em;
+    border: 0%;
+    border-radius: 50%;
+    background-color: #ccf4e3;
+    width: 30%;
+    height: 50px;
+    position: absolute;
+    top: 70%;
+    left: 35%;
+    line-height: 50px;
+}

@@ -81,7 +81,7 @@ li {
     list-style-type: none;
 }
 
-nav {
+.frise {
     display: flex;
     border-bottom: solid black;
 }
@@ -264,4 +264,10 @@ footer .spirit {
     top: 70%;
     left: 35%;
     line-height: 50px;
+}
+
+.video {
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 2%;
 }

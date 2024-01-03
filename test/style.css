@@ -1,98 +1,125 @@
 @font-face {
-    font-family: "rockwell";
-    src: url("../assets/font/ROCK.TTF");
-    font-weight: normal;
-    font-display: swap;
+  font-family: "rockwell";
+  src: url("../assets/font/ROCK.TTF");
+  font-weight: normal;
+  font-display: swap;
 }
-  
+
 @font-face {
-font-family: "rockwell";
-src: url("../assets/font/rockwell-Bold.ttf");
-font-weight: bold;
-font-display: swap;
+  font-family: "rockwell";
+  src: url("../assets/font/rockwell-Bold.ttf");
+  font-weight: bold;
+  font-display: swap;
 }
 
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    background-color: rgb(5, 27, 33);
-    text-align: center;
-    color: aliceblue;
-    font-size: 15px;
-    font-family: rockwell;
+  background-color: rgb(5, 27, 33);
+  text-align: center;
+  color: aliceblue;
+  font-size: 15px;
+  font-family: rockwell;
 }
 
 header {
-    margin: 7%;
+  margin: 7%;
 }
 
 #photo {
-    width: 60%;
-    height: 180px;
-    border-radius: 50%;
-    background-color: black;
-    margin: auto;
+  width: 60%;
+  height: 180px;
+  border-radius: 50%;
+  background-color: black;
+  margin: auto;
 }
 
 .presentation {
-    margin: 7%;
-    text-align: center;
-    color: aliceblue;
+  margin: 7%;
+  text-align: center;
+  color: aliceblue;
 }
 
 h3 {
-    font-size: 25px;
-    color:rgb(30, 102, 110);
-    border-top: 2px solid black;
-    border-bottom: 2px solid black;
-    padding: 5px;
+  font-size: 25px;
+  color: rgb(30, 102, 110);
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  padding: 5px;
 }
 
 .localisation {
-    display: flex;
-    justify-content:center;
-    margin: 4%;
+  display: flex;
+  justify-content: center;
+  margin: 4%;
 }
 .localisation img {
-    padding-right: 5%;
+  padding-right: 5%;
 }
 
 h4 {
-    margin: 2%;
-    font-size: 15px;
-    /* color:rgb(60, 110, 155); */
-    color:rgb(60, 110, 155);
+  margin: 2%;
+  font-size: 15px;
+  /* color:rgb(60, 110, 155); */
+  color: rgb(60, 110, 155);
 }
 
 .formation {
-    margin: 3%;
+  margin: 3%;
 }
 
 .formation p {
-    font-size: 12px;
+  font-size: 12px;
 }
 
 .formation ul {
-    text-align: left;
-    list-style-type: disc;
-    padding-left: 20px;
+  text-align: left;
+  list-style-type: disc;
+  padding-left: 20px;
 }
 
 .technical_skill {
-    margin: 5% 2% 5% 2%;
+  margin: 5% 2% 5% 2%;
 }
 
 .soft_skill {
-    margin: 3%;
-    font-size: 20px;
+  margin: 3%;
+  font-size: 20px;
 }
 
-@media screen and (min-width: 600px) and (max-width: 850px){
-    body {
-        font-size: 25px;
-    }
-    
+@media screen and (min-width: 600px) and (max-width: 850px) {
+  body {
+    font-size: 25px;
+  }
+  .partie_one {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+  }
+  .localisation {
+    font-size: 18px;
+  }
+
+  .partie_two {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-area: 
+    "experience, skill_containeur"
+    "technical_skill, technical_skill";
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+  }
+  .experience {
+    grid-area: experience;
+  }
+  .technical_skill_containeur {
+    grid-area: technical_skill;
+  }
+  .soft_skill_containeur {
+    grid-area: skill_containeur;
+  }
 }

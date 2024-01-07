@@ -27,13 +27,18 @@ body {
 }
 
 header {
-  margin: 7%;
+  margin-top: 7%;
 }
 
 #photo img{
   min-width: 22%;
   height: 180px;
-  margin: auto;
+  margin: 4% auto 0% auto;
+  border-radius: 50%;
+}
+
+.partie_one_block_one {
+  margin-bottom: 5%;
 }
 
 .partie_icone {
@@ -45,6 +50,7 @@ header {
   text-align: center;
   color: aliceblue;
 }
+
 .icone_titre {
   display: flex;
   justify-content: center;
@@ -75,7 +81,6 @@ h3 {
 h4 {
   margin: 2%;
   font-size: 15px;
-  /* color:rgb(60, 110, 155); */
   color: rgb(60, 110, 155);
 }
 
@@ -103,9 +108,56 @@ h4 {
   font-size: 20px;
 }
 
+.soft_skills_containeur a {
+  display: block;
+  font-size: 20px;
+  padding: 1%;
+}
+
 @media screen and (min-width: 600px) and (max-width: 1250px) {
   body {
     font-size: 25px;
+  }
+
+  main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "partie_one_block_two partie_zero partie_one_block_one"
+      "experience soft_skills technical_skill";
+  }
+  .partie_zero{
+    grid-area: partie_zero;
+    align-self: center;
+  }
+  .partie_one_block_one{
+    grid-area: partie_one_block_one;
+  }
+  .partie_one_block_two{
+    grid-area: partie_one_block_two;
+  }
+  .experience {
+    grid-area: experience;
+    font-size: 18px;
+  }
+  .soft_skills_containeur {
+    grid-area: soft_skills;
+  }
+
+  .soft_skills_containeur a {
+    display: block;
+    font-size: 25px;
+    padding: 2%;
+  }
+  .soft_skill {
+    font-size: 25px;
+  }
+  .technical_skill_containeur {
+    grid-area: technical_skill;
+  }
+  .technical_skill {
+    width: 100px;
   }
 
   #photo img {
@@ -115,33 +167,15 @@ h4 {
   h4 {
     font-size: 20px;
   }
-  .partie_one {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: space-evenly;
-  }
-  .partie_one_block_one {
-    min-width: 50%;
-  }
+
   .formation p {
     font-size: 18px;
   }
+
   .localisation {
     font-size: 18px;
   }
-  .partie_two {
-    display: flex;
-  }
-  .experience {
-    font-size: 18px;
-  }
-  .technical_skill {
-    width: 120px;
-  }
-  .soft_skill {
-    display: inline;
-    font-size: 18px;
-  }
+
 }
 
 @media screen and (min-width: 1250px) {
@@ -154,6 +188,11 @@ h4 {
       "empty_one partie_icone empty_two"
       "experience soft_skills technical_skill";
   }
+
+  .icone_titre img {
+    display: none;
+  }
+
   h1 {
     font-size: 100px;
   }
@@ -168,21 +207,24 @@ h4 {
   }
 
   .partie_zero{
-    /* display: none; */
+    display: none;
     grid-area: partie_zero;
-    transform: translateY(-10%);
+    align-self: center;
   }
-  .partie_zero #photo img{
-    height: 300px;
+  #photo img{
+    height: 400px;
     margin-bottom: 5%;
   }
   .partie_zero .presentation{
     font-size: 30px;
   }
   .partie_one_block_one{
-    /* display: none; */
+    display: none;
     grid-area: partie_one_block_one;
-    transform: translateY(20%);
+  }
+
+  .partie_one_block_one p {
+    font-size: 30px;
   }
 
   .localisation img {
@@ -195,23 +237,22 @@ h4 {
     font-size: 30px;
   }
   .formation p {
-    font-size: 18px;
+    font-size: 25px;
   }
   .partie_one_block_two{
-    /* display: none; */
+    display: none;
     grid-area: partie_one_block_two;
-    transform: translateY(20%);
   }
   .experience{
     grid-area: experience;
-    /* display: none; */
+    display: none;
   }
   .experience li {
     font-size: 20px;
   }
   .technical_skill_containeur{
     grid-area: technical_skill;
-    /* display: none; */
+    display: none;
   }
 
   .technical_skill {
@@ -219,13 +260,22 @@ h4 {
   }
   .soft_skills_containeur{
     grid-area: soft_skills;
-    align-self: center;
-    /* display: none; */
+    display: none;
   }
+
   .soft_skill {
     font-size: 30px;
   }
-  .empty_one {
+  .soft_skills_containeur a {
+    display: block;
+    font-size: 30px;
+    padding: 1%;
+  }
+
+  .empty_zero {
+    grid-area: empty_zero;
+  }
+  .empty_one {  
     grid-area: empty_one;
   }
   .empty_two {
@@ -251,36 +301,46 @@ h4 {
     width: 200px;
     grid-area: icone_ordinateur;
     transform: translateY(-50%);
+    transition: transform 0.3s ease-in-out;
   }
+
+  .icone_ordinateur:hover {
+    transform: translateY(-50%) scale(1.5);
+  }
+
   .icone_keyboard {
     width: 80px;
     grid-area: icone_keyboard;
     justify-self: end;
     align-self: center;
-    /* display: none; */
+    transform: translateX(-800px);
+    display: none;
   }
+
   .icone_webcam {
     width: 80px;
-    transform: translateY(25%);
+    transform: translateY(-1500px);
     justify-self: center;
     grid-area: icone_webcam;
-    /* display: none; */
+    display: none;
   }
   .icone_micro {
     width: 80px;
     align-self: center;
     grid-area: icone_micro;
-    /* display: none; */
+    transform: translateX(800px);
+    display: none;
   }
   .icone_mouse {
     width: 80px;
     grid-area: icone_mouse;
-    /* display: none; */
+    display: none;
   }
   .icone_usb {
     width: 80px;
     justify-self: end;
+    transform: translateX(-800px);
     grid-area: icone_usb;
-    /* display: none; */
+    display: none;
   }
 }
